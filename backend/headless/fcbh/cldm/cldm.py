@@ -243,7 +243,6 @@ class ControlNet(nn.Module):
             num_heads = ch // num_head_channels
             dim_head = num_head_channels
         if legacy:
-            #num_heads = 1
             dim_head = ch // num_heads if use_spatial_transformer else num_head_channels
         mid_block = [
             ResBlock(
